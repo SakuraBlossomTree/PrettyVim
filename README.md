@@ -4,7 +4,7 @@ A pretty [Neovim](https://github.com/neovim/neovim) Configuration with the packe
 
 ## Screenshots
 
-![Neovim Screenshot](/Pictures/Screenshots/neovim.png)
+![Neovim Screenshot](Screenshots/neovim.png)
 
 ## Plugins
 
