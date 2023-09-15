@@ -64,6 +64,12 @@ return packer.startup(function(use)
     use("hrsh7th/cmp-buffer")
     use("hrsh7th/cmp-path")
 
+    require('cmp').setup({
+        sources = {
+            { name = 'orgmode' }
+        }
+    })
+
     -- snippets
    
     use("L3MON4D3/LuaSnip")
@@ -97,7 +103,26 @@ return packer.startup(function(use)
 
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
+        run = ':TSUpdate',
+        highlight = {
+
+            enable = true,
+
+            additional_vim_regex_highlighting = { "markdown" }
+
+        }
+    }
+
+    require('nvim-treesitter.configs').setup {
+  -- If TS highlights are not enabled at all, or disabled via `disable` prop,
+  -- highlighting will fallback to default Vim syntax highlighting
+        highlight = {
+            enable = true,
+            -- Required for spellcheck, some LaTex highlights and
+            -- code block highlights that do not have ts grammar
+            additional_vim_regex_highlighting = {'org'},
+        },
+        ensure_installed = {'org'}, -- Or run :TSUpdate org
     }
 
     use('andweeb/presence.nvim')
@@ -121,6 +146,19 @@ return packer.startup(function(use)
             "MunifTanjim/nui.nvim",
             }
         }
+
+    require('orgmode').setup_ts_grammar()
+
+    use {'nvim-orgmode/orgmode', config = function()
+            require('orgmode').setup{}
+        
+        end
+        }
+
+    require('orgmode').setup({
+            org_agenda_files = {'~/my-orgs/**/*'},
+            org_default_notes_file = '~/my-orgs/note.org',
+        })
 
     if packer_bootstrap then
         require("packer").sync()

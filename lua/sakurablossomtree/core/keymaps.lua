@@ -39,6 +39,8 @@ keymap.set('n', '<leader>fg', builtin.live_grep, {})
 keymap.set('n', '<leader>fb', builtin.buffers, {})
 keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
-keymap.set('n', '<leader>t', ":ToggleTerm size=40 direction=vertical<CR>")
+keymap.set('n', '<leader>vt', ":ToggleTerm size=40 direction=vertical<CR>")
+
+keymap.set('n', '<leader>ht', ":ToggleTerm size=10 direction=horizontal<CR>")
 
 keymap.set('n', '<leader>s', ":MarkdownPreviewToggle<CR>")
