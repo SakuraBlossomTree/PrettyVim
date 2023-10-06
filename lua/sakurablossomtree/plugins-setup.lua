@@ -95,16 +95,24 @@ return packer.startup(function(use)
 
     use("ray-x/web-tools.nvim")
 
+    -- use {
+    --     'nvim-treesitter/nvim-treesitter',
+    --     run = ':TSUpdate',
+    --     highlight = {
+    --
+    --         enable = true,
+    --
+    --         additional_vim_regex_highlighting = { "markdown" }
+    --
+    --     }
+    -- }
+    
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-        highlight = {
-
-            enable = true,
-
-            additional_vim_regex_highlighting = { "markdown" }
-
-        }
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
     }
 
     use('andweeb/presence.nvim')
