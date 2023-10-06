@@ -30,6 +30,10 @@ A pretty [Neovim](https://github.com/neovim/neovim) Configuration with the packe
 - presence.nvim - Discord Rich Presence (you want to show off to others what you are using)
 - toggleterm - Togglable terminal for Neovim
 
+## Requirements
+
+- Neovim
+
 ## Usage
 
 1. Clone the repo
@@ -58,7 +62,8 @@ It is not required to copy the plugin directory because it just contains the pac
 You want to copy it to your config folder for nvim
 
 ```
-cp ~/neovim-config/lua/sakurablossomtree ~/.config/nvim
+cp -r ~/PrettyVim/lua ~/.config/nvim
+cp -r ~/PrettyVim/init.lua ~/.config/nvim
 ```
 
 3. Go to plugins-setup.lua file, which will be in the lua/sakurablossomtree directory
