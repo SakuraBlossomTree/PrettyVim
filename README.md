@@ -40,7 +40,7 @@ A pretty [Neovim](https://github.com/neovim/neovim) Configuration with the packe
 1. Clone the repo
 
 ```
-git clone git@github.com:SakuraBlossomTree/neovim-config.git
+git clone git@github.com:SakuraBlossomTree/PrettyVim.git
 ```
 
 2. Create the nvim config directory(Optional)
