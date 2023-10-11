@@ -29,6 +29,8 @@ A pretty [Neovim](https://github.com/neovim/neovim) Configuration with the packe
 - tree-sitter - Syntax Highlighting
 - presence.nvim - Discord Rich Presence (you want to show off to others what you are using)
 - toggleterm - Togglable terminal for Neovim
+- jokevim - A simple plugin that prints Vim jokes on startup
+- flutter-tools - Tools for flutter development
 
 ## Requirements
 

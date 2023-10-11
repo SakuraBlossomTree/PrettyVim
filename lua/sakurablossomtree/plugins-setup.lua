@@ -139,6 +139,16 @@ return packer.startup(function(use)
 
     use 'sakurablossomtree/jokevim.nvim'
 
+    use {
+        'akinsho/flutter-tools.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+    }
+
+    require("flutter-tools").setup {}
+
     if packer_bootstrap then
         require("packer").sync()
     end
