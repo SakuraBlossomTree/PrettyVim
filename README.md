@@ -1,5 +1,5 @@
 # Archive
-### This repo has been archived because my updated neovim config is in my dotfiles but you can still use this repo but it's going to be outdated
+### This repo has been archived because my updated neovim config is in my dotfiles repo but you can still use this repo but it's going to be outdated
 
 # PrettyVim
 
